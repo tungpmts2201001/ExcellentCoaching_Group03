@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel='stylesheet' id='megamenu-css'  href='/css/megamenu.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='megamenu-fontawesome-css'  href='https://aptech.fpt.edu.vn/wp-content/plugins/megamenu-pro/icons/fontawesome/css/font-awesome.min.css?ver=1.7' type='text/css' media='all' />
+        <link rel='stylesheet' id='megamenu-genericons-css'  href='https://aptech.fpt.edu.vn/wp-content/plugins/megamenu-pro/icons/genericons/genericons/genericons.css?ver=1.7' type='text/css' media='all' />
+        <link rel='stylesheet' id='flatsome-main-css'  href='https://aptech.fpt.edu.vn/wp-content/themes/flatsome/assets/css/flatsome.css?ver=3.13.1' type='text/css' media='all' />
+        <link rel='stylesheet' id='dashicons-css'  href='https://aptech.fpt.edu.vn/wp-includes/css/dashicons.min.css?ver=5.6.8' type='text/css' media='all' />
+        <link rel='stylesheet' id='formidable-css'  href='https://aptech.fpt.edu.vn/wp-content/plugins/formidable/css/formidableforms.css?ver=1122711' type='text/css' media='all' />
+        <script src="/controller/IndexController.js"></script>
+            <title>Commerce</title>
+    </head>
+    
+<body>
+
+<header>
+    <div ng-app="myApp" ng-controller="customersCtrl"> 
+        <div ng-include="'layout/header.html'"></div>
+      </div>
+       
+      <script>
+      var app = angular.module('myApp', []);
+      app.controller('customersCtrl', function($scope, $http) {
+          $http.get("customers.php").then(function (response) {
+              $scope.names = response.data.records;
+          });
+      });
+      </script>
+</header>
+
+
+<main>
+    <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Overview</span><b></b></h3></div>
+    <div class="row">
+                                
+    <p id="paragraph">This program prepares you for professional roles in an economy that is emerging as a major force in the global marketplace due to growth in new industries, businesses and investment.
+        You will learn to perform high-level commercial, financial and economic analyses while developing cutting-edge knowledge and skills in trending areas.</p>
+    <br>
+    <p><b><a id="downloadtext" href="/download/commerce.docx">Download course detail here</a></b></p>
+
+    <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Classes</span><b></b></h3></div>
+    <div class="row">
+
+    <p id="paragraph">Pleas check classes availability in the table below</p>
+    <br>
+
+    <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Subjects</span><b></b></h3></div>
+    <div class="row">   
+    </div>
+</main>
+
+<section class="container section-title-container">
+    <table>
+        <tr>
+            <td></td>
+            <td>
+                <input type="hidden" value="{{ carModel.id }}">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Brand:</td>
+            <td>
+                <input ng-model="carModel.brand">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Model:</td>
+            <td>
+                <input ng-model="carModel.model">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Price:</td>
+            <td>
+                <input ng-model="carModel.price">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                <input type="button" value="Save" ng-click="Add()" ng-disabled="btnSave">
+                <input type="button" ng-disabled="btnUpdate" value="Update" ng-click="Update()">
+            </td>                
+        </tr>
+    </table>
+
+    <table class="table table-hover">
+        <caption><h1>Car List</h1></caption>
+        <tr>
+            <th>ID</th>
+            <th ng-click="doSort('brand')">Brand</th>
+            <th ng-click="doSort('model')">Model</th>
+            <th ng-click="doSort('price')">Price</th>
+            <th>Image</th>
+            <th>Function</th>
+        </tr>
+        <!-- Repeat gọi giá trị -->
+        <tr ng-repeat="car in carList | orderBy:sort.cot:sort.descending | filter:txtSearch" ng-click="GetRecord(car)">                
+            <td>{{ car.id }}</td>
+            <td>{{ car.brand }}</td>
+            <td>{{ car.model }}</td>
+            <td>{{ car.price }}</td>
+            <td><img src="{{ car.img }}" width="150"></td>
+            <td>
+              <a href="#" ng-click="Delete(car)">Delete</a>
+            </td>
+            
+        </tr>            
+    </table>      
+</section>
+<footer>
+
+</footer>
+</body>
+</html>
