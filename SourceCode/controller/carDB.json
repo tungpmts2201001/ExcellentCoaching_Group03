@@ -1,0 +1,7 @@
+{
+    "cars":[
+        {"id": 0, "brand":"Toyota","model":"Cross","price":"500.000.000","img":"../images/car.jpg"},
+        {"id": 1, "brand":"Valan","model":"RSZ3","price":"800.000.000","img":"../images/car.jpg"},
+        {"id": 2, "brand":"Lambogini","model":"Aventador","price":"12.200.000.000","img":"../images/car.jpg"}
+        ]
+}
