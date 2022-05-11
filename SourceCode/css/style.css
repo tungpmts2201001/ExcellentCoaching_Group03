@@ -1,0 +1,27 @@
+*{
+    font-family: tahoma;
+    box-sizing: border-box;
+}
+
+#logo{
+    width: 108px;
+}
+
+#title{
+    padding-left: 10px;
+}
+
+#paragraph{
+    text-align: justify;
+    padding-left: 50px;
+}
+
+#downloadtext{
+    color: rgb(66, 19, 180);
+    text-align: justify;
+    padding-left: 50px;
+}
+
+#commerceclasses{
+    padding-left: 50px;
+}
