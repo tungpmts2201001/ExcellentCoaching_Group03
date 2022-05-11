@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel='stylesheet' id='megamenu-css'  href='/css/megamenu.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='megamenu-fontawesome-css'  href='https://aptech.fpt.edu.vn/wp-content/plugins/megamenu-pro/icons/fontawesome/css/font-awesome.min.css?ver=1.7' type='text/css' media='all' />
+        <link rel='stylesheet' id='megamenu-genericons-css'  href='https://aptech.fpt.edu.vn/wp-content/plugins/megamenu-pro/icons/genericons/genericons/genericons.css?ver=1.7' type='text/css' media='all' />
+        <link rel='stylesheet' id='flatsome-main-css'  href='https://aptech.fpt.edu.vn/wp-content/themes/flatsome/assets/css/flatsome.css?ver=3.13.1' type='text/css' media='all' />
+        <link rel='stylesheet' id='dashicons-css'  href='https://aptech.fpt.edu.vn/wp-includes/css/dashicons.min.css?ver=5.6.8' type='text/css' media='all' />
+        <link rel='stylesheet' id='formidable-css'  href='https://aptech.fpt.edu.vn/wp-content/plugins/formidable/css/formidableforms.css?ver=1122711' type='text/css' media='all' />
+    
+            <title>Document</title>
+            
+    </head>
+<body>
+ 
+<div ng-app="myApp" ng-controller="customersCtrl"> 
+  <div ng-include="'layout/header.html'"></div>
+</div>
+ 
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("customers.php").then(function (response) {
+        $scope.names = response.data.records;
+    });
+});
+</script>
+ 
+<main>
+    <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Overview</span><b></b></h3></div>
+    <div class="row">
+                                
+    <p id="paragraph">This program prepares you for skils to solve maths problems in due to growth in demand for industries and technologies. You will learn to perform from beginning level to advanced maths.</p>
+    <br>
+    <p><b><a id="downloadtext" href="/download/mathematic.docx">Download course detail here</a></b></p>
+
+    <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Classes</span><b></b></h3></div>
+    <div class="row">
+
+    <p id="paragraph">Pleas check classes availability in the table below</p>
+    <br>
+
+    <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Subjects</span><b></b></h3></div>
+    <div class="row">   
+    </div>
+</main>
+
+<footer>
+ 
+</footer>
+ 
+</body>
+</html>
