@@ -3,25 +3,38 @@
     box-sizing: border-box;
 }
 
-#logo{
+#logo {
     width: 108px;
 }
 
-#title{
+#title {
     padding-left: 10px;
 }
 
-#paragraph{
+#paragraph {
     text-align: justify;
     padding-left: 50px;
 }
-
-#downloadtext{
+#downloadtext {
     color: rgb(66, 19, 180);
     text-align: justify;
     padding-left: 50px;
 }
-
-#commerceclasses{
+#commerceclasses {
     padding-left: 50px;
 }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

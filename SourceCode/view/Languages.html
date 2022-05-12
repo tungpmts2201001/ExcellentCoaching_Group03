@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel='stylesheet' id='megamenu-css'  href='/css/megamenu.css' type='text/css' media='all' />
+        <link rel="stylesheet" href='/SourceCode/css/style.css'>
+        <link rel='stylesheet' id='megamenu-css'  href='/SourceCode/css/megamenu.css' type='text/css' media='all' />
         <link rel='stylesheet' id='megamenu-fontawesome-css'  href='https://aptech.fpt.edu.vn/wp-content/plugins/megamenu-pro/icons/fontawesome/css/font-awesome.min.css?ver=1.7' type='text/css' media='all' />
         <link rel='stylesheet' id='megamenu-genericons-css'  href='https://aptech.fpt.edu.vn/wp-content/plugins/megamenu-pro/icons/genericons/genericons/genericons.css?ver=1.7' type='text/css' media='all' />
         <link rel='stylesheet' id='flatsome-main-css'  href='https://aptech.fpt.edu.vn/wp-content/themes/flatsome/assets/css/flatsome.css?ver=3.13.1' type='text/css' media='all' />
@@ -21,7 +21,7 @@
 <body>
  
 <div ng-app="myApp" ng-controller="customersCtrl"> 
-  <div ng-include="'layout/header.html'"></div>
+  <div ng-include="'/SourceCode/view/layout/header.html'"></div>
 </div>
  
 <script>
@@ -41,18 +41,60 @@ app.controller('customersCtrl', function($scope, $http) {
         The examination of word classes and grammatical features raises questions about the ways language articulates meaning, while the consideration of logical, rhetorical, and poetic structures encourages reflection on the ways it can convince, persuade, and affect us.</p>
     <br>
     <p><b><a id="downloadtext" href="/download/languages.docx">Download course detail here</a></b></p>
+</main>
+<br>
 
+<main>
     <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Classes</span><b></b></h3></div>
     <div class="row">
-
-    <p id="paragraph">Pleas check classes availability in the table below</p>
+        </div>
+    <section class="container section-title-main">
+        <table>
+          <tr>
+            <th>Class days</th>
+            <th>Session</th>
+          </tr>    
+          <tr>
+            <td>Wednesday, Friday</td>
+            <td>Morning: 9am – 11am</td>
+          </tr>
+          <tr>
+            <td>Thursday, Saturday</td>
+            <td>Afternoon: 2pm - 4pm</td>
+        </table>
+    </section>
+</main>
     <br>
 
+<main>
     <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Subjects</span><b></b></h3></div>
     <div class="row">   
     </div>
+<section class="container section-title-main">
+<table>
+  <tr>
+    <th>Subject name</th>
+    <th>Duration</th>
+    <th>Tuition fees</th>
+  </tr>
+  <tr>
+    <td>English</td>
+    <td>12 weeks</td>
+    <td>$1,200</td>    
+  </tr>
+  <tr>
+    <td>Spanish</td>
+    <td>12 weeks</td>
+    <td>$1,200</td>
+  </tr>
+  <tr>
+    <td>Chinese</td>
+    <td>12 weeks</td>
+    <td>$1,200</td>   
+  </tr>
+</table>
+</section>
 </main>
-
 <footer>
   
 </footer>

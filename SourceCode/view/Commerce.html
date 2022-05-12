@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel='stylesheet' id='megamenu-css'  href='/css/megamenu.css' type='text/css' media='all' />
+        <link rel="stylesheet" href='/SourceCode/css/style.css'>
+        <link rel='stylesheet' id='megamenu-css'  href='/SourceCode/css/megamenu.css' type='text/css' media='all' />
         <link rel='stylesheet' id='megamenu-fontawesome-css'  href='https://aptech.fpt.edu.vn/wp-content/plugins/megamenu-pro/icons/fontawesome/css/font-awesome.min.css?ver=1.7' type='text/css' media='all' />
         <link rel='stylesheet' id='megamenu-genericons-css'  href='https://aptech.fpt.edu.vn/wp-content/plugins/megamenu-pro/icons/genericons/genericons/genericons.css?ver=1.7' type='text/css' media='all' />
         <link rel='stylesheet' id='flatsome-main-css'  href='https://aptech.fpt.edu.vn/wp-content/themes/flatsome/assets/css/flatsome.css?ver=3.13.1' type='text/css' media='all' />
@@ -22,7 +22,7 @@
 
 <header>
     <div ng-app="myApp" ng-controller="customersCtrl"> 
-        <div ng-include="'layout/header.html'"></div>
+        <div ng-include="'/SourceCode/view/layout/header.html'"></div>
       </div>
        
       <script>
@@ -43,77 +43,87 @@
     <p id="paragraph">This program prepares you for professional roles in an economy that is emerging as a major force in the global marketplace due to growth in new industries, businesses and investment.
         You will learn to perform high-level commercial, financial and economic analyses while developing cutting-edge knowledge and skills in trending areas.</p>
     <br>
-    <p><b><a id="downloadtext" href="/download/commerce.docx">Download course detail here</a></b></p>
+    <p><b><a id="downloadtext" href="/SourceCode/download/commerce.pdf">Download course detail here</a></b></p>
+</main>
+<br>
 
+<main>
     <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Classes</span><b></b></h3></div>
     <div class="row">
-
-    <p id="paragraph">Pleas check classes availability in the table below</p>
+        </div>
+    <section class="container section-title-main">
+        <table>
+          <tr>
+            <th>Class days</th>
+            <th>Session</th>
+          </tr>    
+          <tr>
+            <td>Monday, Wednesday, Friday</td>
+            <td>Morning: 9am – 12pm</td>
+          </tr>
+          <tr>
+            <td>Tuesday, Thursday, Saturday</td>
+            <td>Afternoon: 2pm - 5pm</td>
+        </table>
+    </section>
+</main>
     <br>
 
+<main>
     <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Subjects</span><b></b></h3></div>
     <div class="row">   
     </div>
+<section class="container section-title-main">
+<table>
+  <tr>
+    <th>Subject name</th>
+    <th>Duration</th>
+    <th>Tuition fees</th>
+  </tr>
+  <tr>
+    <td>Accounting</td>
+    <td>4 weeks</td>
+    <td>$500</td>    
+  </tr>
+  <tr>
+    <td>Commercial law</td>
+    <td>8 weeks</td>
+    <td>$1,000</td>
+  </tr>
+  <tr>
+    <td>Finance</td>
+    <td>4 weeks</td>
+    <td>$500</td>   
+  </tr>
+  <tr>
+    <td>Economics</td>
+    <td>4 weeks</td>
+    <td>$500</td>   
+  </tr>
+  <tr>
+    <td>IT in Commerce</td>
+    <td>8 weeks</td>
+    <td>$1,000</td>
+  </tr>
+  <tr>
+    <td>Marketing</td>
+    <td>8 weeks</td>
+    <td>$1,000</td>
+  </tr>
+  <tr>
+    <td>Cost/Buying Controller</td>
+    <td>2 weeks</td>
+    <td>$250</td>
+  </tr>
+  <tr>
+    <td>Business Development</td>
+    <td>2 weeks</td>
+    <td>$250</td>
+  </tr>
+</table>
+</section>
 </main>
 
-<section class="container section-title-container">
-    <table>
-        <tr>
-            <td></td>
-            <td>
-                <input type="hidden" value="{{ carModel.id }}">
-            </td>
-        </tr>
-        <tr>
-            <td align="right">Brand:</td>
-            <td>
-                <input ng-model="carModel.brand">
-            </td>
-        </tr>
-        <tr>
-            <td align="right">Model:</td>
-            <td>
-                <input ng-model="carModel.model">
-            </td>
-        </tr>
-        <tr>
-            <td align="right">Price:</td>
-            <td>
-                <input ng-model="carModel.price">
-            </td>
-        </tr>
-        <tr>
-            <td align="right">
-                <input type="button" value="Save" ng-click="Add()" ng-disabled="btnSave">
-                <input type="button" ng-disabled="btnUpdate" value="Update" ng-click="Update()">
-            </td>                
-        </tr>
-    </table>
-
-    <table class="table table-hover">
-        <caption><h1>Car List</h1></caption>
-        <tr>
-            <th>ID</th>
-            <th ng-click="doSort('brand')">Brand</th>
-            <th ng-click="doSort('model')">Model</th>
-            <th ng-click="doSort('price')">Price</th>
-            <th>Image</th>
-            <th>Function</th>
-        </tr>
-        <!-- Repeat gọi giá trị -->
-        <tr ng-repeat="car in carList | orderBy:sort.cot:sort.descending | filter:txtSearch" ng-click="GetRecord(car)">                
-            <td>{{ car.id }}</td>
-            <td>{{ car.brand }}</td>
-            <td>{{ car.model }}</td>
-            <td>{{ car.price }}</td>
-            <td><img src="{{ car.img }}" width="150"></td>
-            <td>
-              <a href="#" ng-click="Delete(car)">Delete</a>
-            </td>
-            
-        </tr>            
-    </table>      
-</section>
 <footer>
 
 </footer>
