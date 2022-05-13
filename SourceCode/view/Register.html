@@ -23,7 +23,7 @@
 <div ng-app="myApp" ng-controller="customersCtrl"> 
   <div ng-include="'/SourceCode/view/layout/header.html'"></div>
 </div>
- 
+
 <script>
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
@@ -31,10 +31,84 @@ app.controller('customersCtrl', function($scope, $http) {
         $scope.names = response.data.records;
     });
 });
+
+function check(){
+            var sName = document.getElementById("txtName").value;
+            var reName = /^\w/;
+            if(!reName.test(sName)){
+                alert("Login Name cannot left blank!")
+                document.getElementById("txtName").focus;
+                return false;
+            }
+            var sMail = document.getElementById("txtMail").value;
+            var reMail = /^\w+[@]\w+[.]\w+([.]\w+)?/;
+            if(!reMail.test(sMail)){
+                alert("Wrong Email")
+                document.getElementById("txtMail").focus;
+                return false;
+            }
+            var sPhone = document.getElementById("txtPhone").value;
+            var rePhone = /^\d{8,12}$/;
+            if(!rePhone.test(sPhone)){
+                alert("False Phone")
+                document.getElementById("txtPhone").focus;
+                return false;
+            }
+
+            var sPassword =document.getElementById("txtPassword").value
+            var sConfirmed = document.getElementById("txtcomfirmed").value;
+            if(sPassword!==sConfirmed){
+                alert("Wrong confirmed");
+                return false;
+         }
+         var message = [];
+        message.push("Your iformation has been sent successfully!");
+        message.push("You have successfully Registered");
+        alert(message.join("\n"));
+
+        }
 </script>
  
 <main>
-    Code tiếp ở phần này
+    <section align="center" id="khung" class="container">
+        <h1>Registration Form</h1>
+        <form onsubmit="return check()">
+        <table >
+            <tr>
+                <td align="right">Username:
+                    <input type="text" id="txtName" autofocus placeholder="Enter Login Name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender:
+            <input type="radio" name="sex" checked>Male
+                <input type="radio" name="sex">Female</td>
+            </tr>
+            <tr>
+                <td align="right">Email:
+                    <input type="text" id="txtMail" placeholder="Enter Email" required>
+                </td>
+            <tr>
+                <td align="right"> Phone:
+                    <input type="number" id="txtPhone" placeholder="Enter Yourphone">
+                </td>    
+            </tr>
+            <tr>
+                <td align="right">Password:
+                    <input type="password" id="txtPassword" placeholder="Enter Password" required>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Confirmed Password:
+                    <input type="password" id="txtcomfirmed" placeholder="Enter Password" required>
+                </td>
+            </tr>
+
+            <td><input type="submit" value="Register">
+            <input type="Reset" value="Reset"></td>
+        </table>
+    </form>
+    </section>
 </main>
 <footer>
  
