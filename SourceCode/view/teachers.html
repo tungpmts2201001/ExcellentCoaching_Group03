@@ -10,6 +10,33 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       <link rel="stylesheet" href='/SourceCode/css/style.css'>
             <title>Commerce</title>
+
+        <style><style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            .zoom {
+              padding: 50px;
+              /* background-color: red; */
+              transition: transform .2s;
+             
+              height: 50px;
+              margin: 0 auto;
+              float: left;
+              width: 500px;
+              border: 3px ;
+              padding: 100px;
+              object-fit: contain;
+              object-position: 150px 0;
+            }                
+            .zoom:hover {
+              -ms-transform: scale(1.5); /* IE 9 */
+              -webkit-transform: scale(1.5); /* Safari 3-8 */
+              transform: scale(1.5); 
+            }
+            
+            </style></style>
     </head>
     
 <body>
@@ -30,7 +57,10 @@
 </header>
 
 <main>
-  
+    <Div align="center" font color="red" >Teacher Information </Div>
+    <div class="zoom" ><img src="/SourceCode/image/2.jpg">Thạc Sĩ Nguyễn Thị A</div>
+    <div class="zoom" ><img src="/SourceCode/image/3.jpg">Tiến Sĩ Nguyễn Quốc B</div>
+    <div class="zoom" ><img src="/SourceCode/image/5.jpg">Tiến Sĩ Phan Thành C</div>
 </main>
 
 <footer>
