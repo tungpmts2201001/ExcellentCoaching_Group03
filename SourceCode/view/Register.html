@@ -10,13 +10,6 @@
 
 </header>
 <script>
-var app = angular.module('myApp', []);
-app.controller('customersCtrl', function($scope, $http) {
-    $http.get("customers.php").then(function (response) {
-        $scope.names = response.data.records;
-    });
-});
-
 function check(){
             var sName = document.getElementById("txtName").value;
             var reName = /^\w/;
