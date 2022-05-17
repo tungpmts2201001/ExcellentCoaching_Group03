@@ -1,23 +1,14 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href='/SourceCode/css/style.css'>
-            <title>Document</title>
-            
-    </head>
-<body>
- 
-<div ng-app="myApp" ng-controller="customersCtrl"> 
-  <div ng-include="'/SourceCode/view/layout/header.html'"></div>
-</div>
+<html ng-app="">
 
+<head ng-include="'/view/layout/head.html'">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <title>Courses</title>
+</head>
+<body>
+ <header class="header" ng-include="'/view/layout/header.html'">
+
+</header>
 <script>
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
@@ -64,50 +55,44 @@ function check(){
 </script>
  
 <main>
-    <section align="center" id="khung" class="container">
-        <h1>Registration Form</h1>
-        <form onsubmit="return check()">
-        <table >
-            <tr>
-                <td align="right">Username:
-                    <input type="text" id="txtName" autofocus placeholder="Enter Login Name" required>
-                </td>
-            </tr>
-            <tr>
-                <td>Gender:
-            <input type="radio" name="sex" checked>Male
-                <input type="radio" name="sex">Female</td>
-            </tr>
-            <tr>
-                <td align="right">Email:
-                    <input type="text" id="txtMail" placeholder="Enter Email" required>
-                </td>
-            <tr>
-                <td align="right"> Phone:
-                    <input type="number" id="txtPhone" placeholder="Enter Yourphone" required>
-                </td>    
-            </tr>
-            <tr>
-                <td align="right">Birthday:
-                    <input type="date">
-                </td>
-            </tr>
-            <tr>
-                <td align="right">Password:
-                    <input type="password" id="txtPassword" placeholder="Enter Password" required>
-                </td>
-            </tr>
-            <tr>
-                <td align="right">Confirmed Password:
-                    <input type="password" id="txtcomfirmed" placeholder="Enter Password" required>
-                </td>
-            </tr>
-
-            <td><input type="submit" value="Register">
-            <input type="Reset" value="Reset"></td>
-        </table>
-    </form>
+    <div class="app-container">
+    <section>
+        <div class="row">
+            <div class="col-8">
+                <h1>ONLINE REGISTER</h1>
+                <img src="https://www.rmit.edu.vn/content/dam/rmit/vn/en/assets-for-production/images/international-students-in-vietnam-campus/2019-international-students-in-vn-campus/international-students-laughing-cafe-02.jpg"
+                    width="700" height="250" alt="">
+                <p><b>Guide</b><br />Please fill in the registration information in the form below:</p>
+                <ol>
+                    <li>Enter complete information in the registration form</li>
+                    <li>After filling in all the information, press the button &#8220;<strong>REGISTER</strong>&#8221; a confirmation message will appear</li>
+                 <li>Lines marked with (<span style="color: #d83131;"><strong>*</strong></span>) is required information</li>
+                </ol>
+                <form onsubmit="return check()">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input class="form-control" type="text" id="txtName" autofocus placeholder="Enter Login Name" required/>
+                        <label>Gender</label> <br/>
+                        <input type="radio" name="sex" checked>Male
+                        <input type="radio" name="sex">Female<br/>
+                        <label>Email</label>
+                        <input class="form-control" type="text" id="txtMail" placeholder="Enter Email" required/>
+                        <label>Phone</label>
+                        <input class="form-control" type="number" id="txtPhone" placeholder="Enter Yourphone">
+                        <label>Password</label>
+                        <input class="form-control" type="password" id="txtPassword" placeholder="Enter Password" required/>
+                        <label>Confirmed Password</label>
+                        <input class="form-control" type="password" id="txtcomfirmed" placeholder="Enter Password" required/>
+                        <label>Leave message</label>
+                        <textarea class="w-100" name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+                        <input type="submit" value="Register" class="button-register-now">
+                        <input type="Reset" value="Reset">
+                    </div>
+                </form>
+            </div>
+        </div>
     </section>
+    </div>
 </main>
 <footer>
  

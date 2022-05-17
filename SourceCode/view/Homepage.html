@@ -1,79 +1,170 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="/SourceCode/css/style.css"> 
-        <!-- https://github.com/tungpmts2201001/eProject-Sem01_T1.2201.E0_ExcellentCoaching_Group03/tree/main/SourceCode/css/style.css -->
-       
-            <title>Document</title>
-            
-    </head>
-<body>
-<header>
-    <div ng-app="myApp" ng-controller="customersCtrl"> 
-      <div ng-include="'SourceCode/view/layout/header.html'"></div>
-    </div>
- 
-    <script>
-    var app = angular.module('myApp', []);
-    app.controller('customersCtrl', function($scope, $http) {
-        $http.get("customers.php").then(function (response) {
-            $scope.names = response.data.records;
-        });
-    }); 
-    </script>
-</header>
+<html ng-app="">
 
-<div class="main-container">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+<head ng-include="'/view/layout/head.html'">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <title>Trang chủ</title>
+</head>
+
+<body >
+  <header class="header" ng-include="'/view/layout/header.html'">
+  
+  </header>
+  <main>
+    <div class="main-container">
+      <section class="app-slider">
+        <div id="HomeCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#HomeCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#HomeCarousel" data-slide-to="1"></li>
+            <li data-target="#HomeCarousel" data-slide-to="2"></li>
           </ol>
-      
+
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="https://www.rmit.edu.vn/content/dam/rmit/vn/en/assets-for-production/images/homepage/mib-info-day-event-banner-1440x400.jpg" alt="Los Angeles" style="width:100%;">
+              <img
+                src="https://www.rmit.edu.vn/content/dam/rmit/vn/en/assets-for-production/images/homepage/mib-info-day-event-banner-1440x400.jpg"
+                alt="" style="width:100%;">
             </div>
-      
+
             <div class="item">
-              <img src="https://www.rmit.edu.vn/content/dam/rmit/vn/en/assets-for-production/images/homepage/8-may-event-carousel.jpg" alt="Chicago" style="width:100%;">
+              <img
+                src="https://www.rmit.edu.vn/content/dam/rmit/vn/en/assets-for-production/images/homepage/8-may-event-carousel.jpg"
+                alt="" style="width:100%;">
             </div>
-          
-            <!-- <div class="item">
-              <img src="ny.jpg" alt="New york" style="width:100%;">
-            </div> -->
+
+            <div class="item">
+                <img src="ny.jpg" alt="" style="width:100%;">
+              </div>
           </div>
-      
+
           <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <a class="left carousel-control" href="#HomeCarousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <a class="right carousel-control" href="#HomeCarousel" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
           </a>
         </div>
+      </section>
     </div>
-      
-   
-</main>
+    <div class="app-container">
+      <section class="why">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-center text-light">TẠI SAO LẠI CHỌN CHÚNG TÔI?</h1>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-2 col-2">
+            <img class="w-100" src="https://aptech.fpt.edu.vn/wp-content/uploads/2021/03/icon-ma%CC%80u-01.png" alt="">
+          </div>
+          <div class="col-lg-2 col-2">
+            <img class="w-100" src="https://aptech.fpt.edu.vn/wp-content/uploads/2021/03/icon-ma%CC%80u-01.png" alt="">
+          </div>
+          <div class="col-lg-2 col-2">
+            <img class="w-100" src="https://aptech.fpt.edu.vn/wp-content/uploads/2021/03/icon-ma%CC%80u-01.png" alt="">
+          </div>
+          <div class="col-lg-2 col-2">
+            <img class="w-100" src="https://aptech.fpt.edu.vn/wp-content/uploads/2021/03/icon-ma%CC%80u-01.png" alt="">
+          </div>
+          <div class="col-lg-2 col-2">
+            <img class="w-100" src="https://aptech.fpt.edu.vn/wp-content/uploads/2021/03/icon-ma%CC%80u-01.png" alt="">
+          </div>
+
+        </div>
+      </section>
+      <section>
+        <div class="row">
+          <div class="col-3">
+            <div class="row">
+              <div class="col-4">
+                <img class="w-100" src="https://aptech.fpt.edu.vn/wp-content/uploads/2020/10/bubble-chart-fill.png"
+                  alt="">
+              </div>
+              <div class="col-8">
+                <p><b>ĐIỀU KIỆN
+                  </b></p>
+                <p>TỐT NGHIỆP THPT
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row">
+              <div class="col-4">
+                <img class="w-100" src="https://aptech.fpt.edu.vn/wp-content/uploads/2020/10/bubble-chart-fill.png"
+                  alt="">
+              </div>
+              <div class="col-8">
+                <p><b>ĐIỀU KIỆN
+                  </b></p>
+                <p>TỐT NGHIỆP THPT
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row">
+              <div class="col-4">
+                <img class="w-100" src="https://aptech.fpt.edu.vn/wp-content/uploads/2020/10/bubble-chart-fill.png"
+                  alt="">
+              </div>
+              <div class="col-8">
+                <p><b>ĐIỀU KIỆN
+                  </b></p>
+                <p>TỐT NGHIỆP THPT
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row">
+              <div class="col-4">
+                <img class="w-100" src="https://aptech.fpt.edu.vn/wp-content/uploads/2020/10/bubble-chart-fill.png"
+                  alt="">
+              </div>
+              <div class="col-8">
+                <p><b>ĐIỀU KIỆN
+                  </b></p>
+                <p>TỐT NGHIỆP THPT
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="app-register-now">
+        <div class="row">
+            <div class="col-lg-6">
+              <h3>
+                HỌC LẬP TRÌNH HỌC TẠI FPT APTECH
+              </h3>
+              <p>FPT-Aptech có hơn 22 năm kinh nghiệm đào tạo lập trình viên quốc tế tại Việt Nam, và luôn là sự lựa chọn hàng đầu của các thí sinh và nhà tuyển dụng.
+              </p>
+              <button class="button-register-now">
+                 Đăng ký ngay
+              </button>
+            </div>
+            <div class="col-lg-6">
+                <img class="w-100" src="https://eitrawmaterials.eu/wp-content/uploads/2019/05/Label-brochure-1.jpg" alt="">
+            </div>
+        </div>
+      </section>
+    </div>
 
 
+  </main>
+
+  <footer class="footer"ng-include="'/view/layout/footer.html'">
+  
+  </footer>
 </body>
 
-<footer>
 
-</footer>
 
 </html>

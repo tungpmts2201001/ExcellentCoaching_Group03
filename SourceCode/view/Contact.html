@@ -1,77 +1,129 @@
 <!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href='/SourceCode/css/style.css'>
-        <title>Document</title>   
-    </head>
+<html ng-app="">
+
+<head ng-include="'/view/layout/head.html'">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <title>Contact</title>
+</head>
+
 <body>
- 
-<div ng-app="myApp" ng-controller="customersCtrl"> 
-  <div ng-include="'/SourceCode/view/layout/header.html'"></div>
-</div>
- 
-<script>
-var app = angular.module('myApp', []);
-app.controller('customersCtrl', function($scope, $http) {
-    $http.get("customers.php").then(function (response) {
-        $scope.names = response.data.records;
-    });
-});
-</script>
- 
-<main>
-    <h2>Responsive Contact Section</h2>
-    <p>Resize the browser window to see the effect.</p>
-    
-    <div class="main-container">
-      <div style="text-align:center">
-        <h2>Contact Us</h2>
-        <p>Swing by for a cup of coffee, or leave us a message:</p>
-      </div>
-      
-      <div class="column" style="float:left">
-        <!-- <img src="image/ho-chi-minh-city-map-0.jpg" style="width:100%"> -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4660.884183658924!2d106.66245108047731!3d10.786723385940931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1sen!2s!4v1651994015120!5m2!1sen!2s" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>  
-      
-      <div class="column" style="float:right;">
-          <form action="#">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            <br>
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            <br>
-            <label for="country">Country</label>
-            <select id="country" name="country">
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-            </select>
-            <br>
-            <label for="subject">Subject</label>
-            <br>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-            
-            <input type="submit" value="Submit">
-          </form>
+  <header class="header" ng-include="'/view/layout/header.html'">
+
+  </header>
+  <main>
+    <div class="app-container">
+      <section class="introduce">
+        <div class="row d-flex align-items-center">
+          <div class="col-6 ">
+            <div class="introduce-detail">
+              <h4 class="introduce-title">HỌC LẬP TRÌNH <br>
+                HỌC TẠI FPT APTECH
+              </h4>
+              <button class="button-register">Đăng ký ngay</button>
+            </div>
+
+          </div>
+          <div class="col-6">
+            <img class="w-100"
+              src="https://lh3.googleusercontent.com/q3xV3g6FMlMODZexub2S8AGHVBRitfuKiV0SwaY-glgcfvmJVNsecGhV8Wpt9oehxWVyED5WjwT_6eGckdfI3S95T9c4UjGGlk_crg=w1440-v1-e366"
+              alt="">
+          </div>
         </div>
-      </div>
+      </section>
+      <hr>
+      <section class="contact-form">
+        <H3 class="text-center contact-form-title">CONTACT NOW</H3>
+        <div class="row d-flex align-items-center">
+          <div class="col-4">
+            <img class="w-100" src="https://blog.zoom.us/wp-content/uploads/2022/02/CCBlogGif.gif" alt="">
+          </div>
+          <div class="col-8">
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label>Number Phone</label>
+                  <input type="number" class="form-control" placeholder="Your Number Phone">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label>Number Phone</label>
+                  <input type="email" class="form-control" placeholder="Your Email">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea class="w-100" name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section>
+        
+        <H3 class="text-center contact-form-title">Admissions Counseling Office</H3>
+        <div class="row">
+          <div class="col-6">
+            <div class="teacher-card">
+              <div class="teacher-img">
+                  <img class="w-100"
+                      src="https://www.thebalancecareers.com/thmb/mA1EU2tgVbzc6vkoreIvq_uIlok=/1885x1414/smart/filters:no_upscale()/teacher-pointing-while-teaching-in-classroom-962347986-75ce5f976522477686ca12d3e7972054.jpg"
+                      height="250" alt="" >
+              </div>
+              <p class="text-align: left">
+                <strong><span style="color: #0000ff;">FPT TPHCM</span></strong>
+              </p>
+              <ul>
+                <li style="text-align: left"><strong>Địa chỉ:</strong><span> 590 Cách Mạng Tháng Tám, Phường 11, Quận 3, HCM</span></li>
+                <li style="text-align: left"><strong>Phòng Tuyển sinh:</strong><span> 028 7300 8866</span></li>
+                <li style="text-align: left"><strong>Email:</strong><span> aptech.fpt@fe.edu.vn</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="teacher-card">
+              <div class="teacher-img">
+                  <img class="w-100"
+                      src="https://www.thebalancecareers.com/thmb/mA1EU2tgVbzc6vkoreIvq_uIlok=/1885x1414/smart/filters:no_upscale()/teacher-pointing-while-teaching-in-classroom-962347986-75ce5f976522477686ca12d3e7972054.jpg"
+                      height="250" alt="">
+              </div>
+              <p class="text-align: left">
+                <strong><span style="color: #0000ff;">FPT TPHCM</span></strong>
+              </p>
+              <ul>
+                <li style="text-align: left"><strong>Địa chỉ:</strong><span> 590 Cách Mạng Tháng Tám, Phường 11, Quận 3, HCM</span></li>
+                <li style="text-align: left"><strong>Phòng Tuyển sinh:</strong><span> 028 7300 8866</span></li>
+                <li style="text-align: left"><strong>Email:</strong><span> aptech.fpt@fe.edu.vn</span></li>
+              </ul>
+            </div>
+          </div>
+      </section>
+
+      </section>
+      <section class="contact-map">
+        <div class="row">
+          <div class="col-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.319281359284!2d106.66408561586222!3d10.786840061948391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1sen!2s!4v1652727484681!5m2!1sen!2s"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="col-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.319281359284!2d106.66408561586222!3d10.786840061948391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1sen!2s!4v1652727484681!5m2!1sen!2s"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+      
     </div>
+  </main>
 
-  
+  <footer class="footer" ng-include="'/view/layout/footer.html'">
 
-</main>
-<footer>
-
-</footer>
- 
+  </footer>
 </body>
+
+
+
 </html>

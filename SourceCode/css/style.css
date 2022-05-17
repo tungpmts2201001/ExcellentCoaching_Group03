@@ -1,144 +1,240 @@
-*{
+* {
     font-family: tahoma;
     box-sizing: border-box;
 }
 /* Header CSS*/
 .header {
-    position: absolute;
-    padding: 30px;
-    text-align: center;
     background: white;
-  }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: white;
 }
-
-li {
-  float: left;
+.app-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1080px;
+    max-width: 1280px;
 }
-
-li a, .dropbtn {
-  display: inline-block;
-  color: #333;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
 }
-
-li a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+.app-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
+.nav-left {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: flex-start;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: flex-end;
+}
+header li {
+    float: left;
+}
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+footer ul li {
+    margin-bottom: 10px;
+}
+footer ul li i {
+    margin-right: 5px;
+}
+footer a {
+    color: #fff;
+}
+header li a,
+.dropbtn {
+    display: inline-block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#HomeCarousel .item img {
+    height: 300px;
+}
+header li a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+    color: #fff;
+}
+header .dropdown-content a:hover{
+  color: #000;
+}
+a:hover {
+    text-decoration: none;
+}
+header li.dropdown {
+    position: initial;
+}
 li.dropdown {
-  display: inline-block;
+    display: inline-block;
 }
+footer {
+    width: 100%;
+}
+.sidebar ul {
+    padding-left: 0;
+    list-style: none;
+    border: 1px solid;
+}
+.sidebar ul li:first-child {
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #c72544;
+}
+.sidebar ul li:hover{
+  background:rgb(66, 19, 180);
+}
+.sidebar ul li:hover a{
+  color: #fff;
 
+}
+.sidebar ul li {
+    padding: 10px 5px;
+    border-bottom: 1px solid #ddd;
+}
+.sidebar ul li:last-child {
+    border-bottom: none;
+}
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
-
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
-
-.dropdown-content a:hover {background-color: #f1f1f1;}
-
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
-
-#Register{
-    float: right;
+.button-register {
+    background-color: #c72544;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
 }
-
-@import url(https://fonts.googleapis.com/css?family=Poppins:500);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
-.snip1547 {
-  background-color: transparent;
-  border: none;
-  color: #ffffff;
-  cursor: pointer;
-  font-family: 'Poppins', Arial, sans-serif;
-  font-size: 17.5px;
-  font-weight: 500;
-  line-height: 48px;
-  margin: 15px 30px;
-  outline: none;
-  padding: 0 43px 0 0;
-  position: relative;
-  text-transform: uppercase;
+.button-register i {
+    margin-left: 20px;
 }
-
-.snip1547 span {
-  background-color: #c72544;
-  border-radius: 5px 0 0 5px;
-  padding: 10px 20px;
-  -webkit-transition: all 0.15s ease-in;
-  transition: all 0.15s ease-in;
-  text-decoration: none;
+.why {
+    padding: 50px 10px;
+    background-color: #c72544;
 }
-
-.snip1547:after {
-  font-family: FontAwesome;
-  content: "\f0da";
-  background-color: #c72544;
-  position: absolute;
-  right: 0%;
-  height: 48px;
-  padding: 1px 20px;
-  top: 0;
-  border-radius: 0 5px 5px 0;
-  -webkit-transition: all 0.15s ease-in;
-  transition: all 0.15s ease-in;
+footer {
+    background-color: #c72544;
+    color: #fff;
+}
+section {
+    padding: 10px 0px;
+    margin-bottom: 10px;
 }
 #logo {
     width: 108px;
     float: left;
 }
-
-/* Content CSS */
+.app-register-now {
+    padding: 20px;
+    color: #fff;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHKAcTNwt31hhqOqTEjJwowVdx1-FEsy_YSw&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.button-register-now {
+    background-color: #2528c7;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #17067a;
+}
 .main-container {
     padding: 100px;
 }
-.column{
-    column-count: 1;
+.courses-name{
+  color: red;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
 }
-#title {
-    padding-left: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
+.teacher-card{
+  border: 1px solid #000;
+  margin: 10px 0px;
 }
-#paragraph {
-    text-align: justify;
-    padding-left: 50px;
+
+.faculty-title{
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+.faculty-card{
+  margin: 20px 0px;
+  border: 1px solid #000;
+}
+.introduce{
+  padding: unset;
+  background-image: url(https://i.pinimg.com/originals/fa/c0/5c/fac05c110c458e9bab3a3248bfb3c376.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-form-title{
+  color: red;
+  font-weight: bold;
+}
+.introduce-detail{
+  padding: 20px;
+}
+.introduce-title{
+  font-size: 30px; 
+  color: #fff;
 }
 #downloadtext {
-    color: rgb(66, 19, 180);
-    text-align: justify;
-    padding-left: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(24, 147, 204);
+    padding: 10px 30px;
+    border-radius: 15px;
 }
-#commerceclasses {
-    padding-left: 50px;
+.courses-title{
+  font-weight: bold;
+  color: red;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.courses-block{
+  padding: unset;
+  border: 1px solid 
 }
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
-td, th {
+td,
+th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;

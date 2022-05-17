@@ -1,97 +1,90 @@
 <!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href='/SourceCode/css/style.css'>
-            <title>Document</title>
-            
-    </head>
-<body>
- 
-<div ng-app="myApp" ng-controller="customersCtrl"> 
-  <div ng-include="'/SourceCode/view/layout/header.html'"></div>
-</div>
- 
-<script>
-var app = angular.module('myApp', []);
-app.controller('customersCtrl', function($scope, $http) {
-    $http.get("customers.php").then(function (response) {
-        $scope.names = response.data.records;
-    });
-});
-</script>
- 
-<main>
-    <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Overview</span><b></b></h3></div>
-    <div class="row">
-                                
-    <p id="paragraph">The languages course explores the relation of language to thought and imagination, both through the study of the essential elements of language and through the translation and analysis of literary and philosophical texts.
-        The examination of word classes and grammatical features raises questions about the ways language articulates meaning, while the consideration of logical, rhetorical, and poetic structures encourages reflection on the ways it can convince, persuade, and affect us.</p>
-    <br>
-    <p><b><a id="downloadtext" href="/download/languages.docx">Download course detail here</a></b></p>
-</main>
-<br>
+<html ng-app="">
+<head ng-include="'/view/layout/head.html'">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <title>Language</title>
+</head>
 
-<main>
-    <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Classes</span><b></b></h3></div>
-    <div class="row">
-        </div>
-    <section class="container section-title-main">
+<body>
+  <header class="header" ng-include="'/view/layout/header.html'">
+
+  </header>
+  <main>
+    <div class="app-container">
+      <h3 class="courses-name">Language</h3>
+      <section>
         <table>
           <tr>
             <th>Class days</th>
             <th>Session</th>
           </tr>    
           <tr>
-            <td>Wednesday, Friday</td>
-            <td>Morning: 9am – 11am</td>
+            <td>Monday, Wednesday, Friday</td>
+            <td>Morning: 9am – 12pm</td>
           </tr>
           <tr>
-            <td>Thursday, Saturday</td>
-            <td>Afternoon: 2pm - 4pm</td>
+            <td>Tuesday, Thursday, Saturday</td>
+            <td>Afternoon: 2pm - 5pm</td>
         </table>
-    </section>
-</main>
-    <br>
-
-<main>
-    <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Subjects</span><b></b></h3></div>
-    <div class="row">   
+      </section>
+      <section>
+        <table>
+          <tr>
+            <th>Subject name</th>
+            <th>Duration</th>
+            <th>Tuition fees</th>
+          </tr>
+          <tr>
+            <td>Accounting</td>
+            <td>4 weeks</td>
+            <td>$500</td>    
+          </tr>
+          <tr>
+            <td>Commercial law</td>
+            <td>8 weeks</td>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <td>Finance</td>
+            <td>4 weeks</td>
+            <td>$500</td>   
+          </tr>
+          <tr>
+            <td>Economics</td>
+            <td>4 weeks</td>
+            <td>$500</td>   
+          </tr>
+          <tr>
+            <td>IT in Commerce</td>
+            <td>8 weeks</td>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <td>Marketing</td>
+            <td>8 weeks</td>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <td>Cost/Buying Controller</td>
+            <td>2 weeks</td>
+            <td>$250</td>
+          </tr>
+          <tr>
+            <td>Business Development</td>
+            <td>2 weeks</td>
+            <td>$250</td>
+          </tr>
+        </table>
+        </section>
+      </section>
     </div>
-<section class="container section-title-main">
-<table>
-  <tr>
-    <th>Subject name</th>
-    <th>Duration</th>
-    <th>Tuition fees</th>
-  </tr>
-  <tr>
-    <td>English</td>
-    <td>12 weeks</td>
-    <td>$1,200</td>    
-  </tr>
-  <tr>
-    <td>Spanish</td>
-    <td>12 weeks</td>
-    <td>$1,200</td>
-  </tr>
-  <tr>
-    <td>Chinese</td>
-    <td>12 weeks</td>
-    <td>$1,200</td>   
-  </tr>
-</table>
-</section>
-</main>
-<footer>
-  
-</footer>
- 
+  </main>
+
+  <footer class="footer" ng-include="'/view/layout/footer.html'">
+
+  </footer>
 </body>
+
+
+
 </html>

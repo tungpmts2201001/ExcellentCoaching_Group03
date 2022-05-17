@@ -1,39 +1,108 @@
 <!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href='/SourceCode/css/style.css'>
-            <title>Commerce</title>
-    </head>
-    
+<html ng-app="">
+
+<head ng-include="'/view/layout/head.html'">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <title>Courses</title>
+</head>
+
 <body>
+    <header class="header" ng-include="'/view/layout/header.html'">
 
-<header>
-    <div ng-app="myApp" ng-controller="customersCtrl"> 
-        <div ng-include="'/SourceCode/view/layout/header.html'"></div>
-      </div>
-       
-      <script>
-      var app = angular.module('myApp', []);
-      app.controller('customersCtrl', function($scope, $http) {
-          $http.get("customers.php").then(function (response) {
-              $scope.names = response.data.records;
-          });
-      });
-      </script>
-</header>
-<main>
-  
-</main>
+    </header>
+    <main>
+        <div class="app-container">
+            <section>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="teacher-card">
+                            <div class="teacher-img">
+                                <img class="w-100"
+                                    src="https://www.thebalancecareers.com/thmb/mA1EU2tgVbzc6vkoreIvq_uIlok=/1885x1414/smart/filters:no_upscale()/teacher-pointing-while-teaching-in-classroom-962347986-75ce5f976522477686ca12d3e7972054.jpg"
+                                    alt="">
+                            </div>
+                            <div class="teacher-text text-center">
+                                <h4>Adam Levin</h4>
+                                <p>Infomation Technologies, Inc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="teacher-card">
+                            <div class="teacher-img">
+                                <img class="w-100"
+                                    src="https://www.thebalancecareers.com/thmb/mA1EU2tgVbzc6vkoreIvq_uIlok=/1885x1414/smart/filters:no_upscale()/teacher-pointing-while-teaching-in-classroom-962347986-75ce5f976522477686ca12d3e7972054.jpg"
+                                    alt="">
+                            </div>
+                            <div class="teacher-text text-center">
+                                <h4>Adam Levin</h4>
+                                <p>Infomation Technologies, Inc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="teacher-card">
+                            <div class="teacher-img">
+                                <img class="w-100"
+                                    src="https://www.thebalancecareers.com/thmb/mA1EU2tgVbzc6vkoreIvq_uIlok=/1885x1414/smart/filters:no_upscale()/teacher-pointing-while-teaching-in-classroom-962347986-75ce5f976522477686ca12d3e7972054.jpg"
+                                    alt="">
+                            </div>
+                            <div class="teacher-text text-center">
+                                <h4>Adam Levin</h4>
+                                <p>Infomation Technologies, Inc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="teacher-card">
+                            <div class="teacher-img">
+                                <img class="w-100"
+                                    src="https://www.thebalancecareers.com/thmb/mA1EU2tgVbzc6vkoreIvq_uIlok=/1885x1414/smart/filters:no_upscale()/teacher-pointing-while-teaching-in-classroom-962347986-75ce5f976522477686ca12d3e7972054.jpg"
+                                    alt="">
+                            </div>
+                            <div class="teacher-text text-center">
+                                <h4>Adam Levin</h4>
+                                <p>Infomation Technologies, Inc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="teacher-card">
+                            <div class="teacher-img">
+                                <img class="w-100"
+                                    src="https://www.thebalancecareers.com/thmb/mA1EU2tgVbzc6vkoreIvq_uIlok=/1885x1414/smart/filters:no_upscale()/teacher-pointing-while-teaching-in-classroom-962347986-75ce5f976522477686ca12d3e7972054.jpg"
+                                    alt="">
+                            </div>
+                            <div class="teacher-text text-center">
+                                <h4>Adam Levin</h4>
+                                <p>Infomation Technologies, Inc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="teacher-card">
+                            <div class="teacher-img">
+                                <img class="w-100"
+                                    src="https://www.thebalancecareers.com/thmb/mA1EU2tgVbzc6vkoreIvq_uIlok=/1885x1414/smart/filters:no_upscale()/teacher-pointing-while-teaching-in-classroom-962347986-75ce5f976522477686ca12d3e7972054.jpg"
+                                    alt="">
+                            </div>
+                            <div class="teacher-text text-center">
+                                <h4>Adam Levin</h4>
+                                <p>Infomation Technologies, Inc</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+    </main>
 
-<footer>
+    <footer class="footer" ng-include="'/view/layout/footer.html'">
 
-</footer>
+    </footer>
 </body>
+
+
+
 </html>

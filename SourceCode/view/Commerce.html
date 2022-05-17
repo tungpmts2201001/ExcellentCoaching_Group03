@@ -1,49 +1,18 @@
 <!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href='/SourceCode/css/style.css'>
-            <title>Commerce</title>
-    </head>
-    
+<html ng-app="">
+<head ng-include="'/view/layout/head.html'">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <title>Commerce</title>
+</head>
+
 <body>
+  <header class="header" ng-include="'/view/layout/header.html'">
 
-<header>
-    <div ng-app="myApp" ng-controller="customersCtrl"> 
-        <div ng-include="'/SourceCode/view/layout/header.html'"></div>
-      </div>
-       
-      <script>
-      var app = angular.module('myApp', []);
-      app.controller('customersCtrl', function($scope, $http) {
-          $http.get("customers.php").then(function (response) {
-              $scope.names = response.data.records;
-          });
-      });
-      </script>
-</header>
-
-<div class="main-container">
-  <h3 style="color:rgb(66, 19, 180);">Overview</h3>
-                                
-    <p id="paragraph">This program prepares you for professional roles in an economy that is emerging as a major force in the global marketplace due to growth in new industries, businesses and investment.
-        You will learn to perform high-level commercial, financial and economic analyses while developing cutting-edge knowledge and skills in trending areas.</p>
-    <br>
-    <p><b><a id="downloadtext" href="/SourceCode/download/commerce.pdf">Download course detail here</a></b></p>
-    </div>
-<br>
-
-<main>
-    <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Classes</span><b></b></h3></div>
-    <div class="row">
-        </div>
-    <section class="container section-title-main">
+  </header>
+  <main>
+    <div class="app-container">
+      <h3 class="courses-name">Commerce</h3>
+      <section>
         <table>
           <tr>
             <th>Class days</th>
@@ -57,67 +26,65 @@
             <td>Tuesday, Thursday, Saturday</td>
             <td>Afternoon: 2pm - 5pm</td>
         </table>
-    </section>
-</main>
-    <br>
-
-<main>
-    <div id="title" class="container section-title-container" ><h3 class="section-title section-title-bold"><b></b><span class="section-title-main" style="color:rgb(66, 19, 180);">Subjects</span><b></b></h3></div>
-    <div class="row">   
+      </section>
+      <section>
+        <table>
+          <tr>
+            <th>Subject name</th>
+            <th>Duration</th>
+            <th>Tuition fees</th>
+          </tr>
+          <tr>
+            <td>Accounting</td>
+            <td>4 weeks</td>
+            <td>$500</td>    
+          </tr>
+          <tr>
+            <td>Commercial law</td>
+            <td>8 weeks</td>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <td>Finance</td>
+            <td>4 weeks</td>
+            <td>$500</td>   
+          </tr>
+          <tr>
+            <td>Economics</td>
+            <td>4 weeks</td>
+            <td>$500</td>   
+          </tr>
+          <tr>
+            <td>IT in Commerce</td>
+            <td>8 weeks</td>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <td>Marketing</td>
+            <td>8 weeks</td>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <td>Cost/Buying Controller</td>
+            <td>2 weeks</td>
+            <td>$250</td>
+          </tr>
+          <tr>
+            <td>Business Development</td>
+            <td>2 weeks</td>
+            <td>$250</td>
+          </tr>
+        </table>
+        </section>
+      </section>
     </div>
-<section class="container section-title-main">
-<table>
-  <tr>
-    <th>Subject name</th>
-    <th>Duration</th>
-    <th>Tuition fees</th>
-  </tr>
-  <tr>
-    <td>Accounting</td>
-    <td>4 weeks</td>
-    <td>$500</td>    
-  </tr>
-  <tr>
-    <td>Commercial law</td>
-    <td>8 weeks</td>
-    <td>$1,000</td>
-  </tr>
-  <tr>
-    <td>Finance</td>
-    <td>4 weeks</td>
-    <td>$500</td>   
-  </tr>
-  <tr>
-    <td>Economics</td>
-    <td>4 weeks</td>
-    <td>$500</td>   
-  </tr>
-  <tr>
-    <td>IT in Commerce</td>
-    <td>8 weeks</td>
-    <td>$1,000</td>
-  </tr>
-  <tr>
-    <td>Marketing</td>
-    <td>8 weeks</td>
-    <td>$1,000</td>
-  </tr>
-  <tr>
-    <td>Cost/Buying Controller</td>
-    <td>2 weeks</td>
-    <td>$250</td>
-  </tr>
-  <tr>
-    <td>Business Development</td>
-    <td>2 weeks</td>
-    <td>$250</td>
-  </tr>
-</table>
-</section>
-</main>
+  </main>
 
-<footer>
+  <footer class="footer" ng-include="'/view/layout/footer.html'">
 
-</footer>
+  </footer>
 </body>
+
+
+
 </html>
