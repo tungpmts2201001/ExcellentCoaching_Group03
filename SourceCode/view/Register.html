@@ -40,12 +40,6 @@ function check(){
                 return false;
             }
 
-            var sPassword =document.getElementById("txtPassword").value
-            var sConfirmed = document.getElementById("txtcomfirmed").value;
-            if(sPassword!==sConfirmed){
-                alert("Wrong confirmed");
-                return false;
-         }
          var message = [];
         message.push("Your iformation has been sent successfully!");
         message.push("You have successfully Registered");
@@ -79,10 +73,6 @@ function check(){
                         <input class="form-control" type="text" id="txtMail" placeholder="Enter Email" required/>
                         <label>Phone</label>
                         <input class="form-control" type="number" id="txtPhone" placeholder="Enter Yourphone">
-                        <label>Password</label>
-                        <input class="form-control" type="password" id="txtPassword" placeholder="Enter Password" required/>
-                        <label>Confirmed Password</label>
-                        <input class="form-control" type="password" id="txtcomfirmed" placeholder="Enter Password" required/>
                         <label>Leave message</label>
                         <textarea class="w-100" name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
                         <input type="submit" value="Register" class="button-register-now">
