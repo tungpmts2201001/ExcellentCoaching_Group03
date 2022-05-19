@@ -1,15 +1,3 @@
-function validateData() {
-    popupTag = document.getElementById('modal')
-    popupTag.style.display = "block"
-
-    return false;
-}
-function hidePopup() {
-    popupTag = document.getElementById('modal')
-    modal.style.display = "none"
-    window.open('admin.html')
-}
-
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http){
     //1. Đọc data từ fiel json
@@ -20,7 +8,7 @@ app.controller('myCtrl', function($scope, $http){
 
 //sort
     $scope.sapxep = {};
-    $scope.doSapxep = function(cot){
+$scope.doSapxep = function(cot){
     var sapxep = $scope.sapxep;
     if(sapxep.cot == cot){
         sapxep.descending = !sapxep.descending;
@@ -40,9 +28,10 @@ $scope.AdminModel ={}
 $scope.AdminList = [];
 
 $scope.Getrecord = function(Admin){
-    $scope.AdminModel.id = Admin.id;
+    $scope.AdminModel.Id = Admin.Id;
     $scope.AdminModel.UserName = Admin.UserName;
-    $scope.AdminModel.Password = Admin.Password;
+    $scope.AdminModel.Email = Admin.Email;
+    $scope.AdminModel.Phone = Admin.Phone;
     $scope.btnUpdate = false;
     $scope.btnSave = true;
 }
@@ -50,9 +39,10 @@ $scope.Getrecord = function(Admin){
  //3.Thêm data (c - create)
  $scope.Add = function(){
     var nation     = {
-        id: $scope.AdminModel.id,
+        Id: $scope.AdminList.lenght + 1,
         UserName: $scope.AdminModel.UserName,
-        Password: $scope.AdminModel.Password
+        Email: $scope.AdminModel.Email,
+        Phone:  $scope.AdminModel.Phone
     };
 
     $scope.AdminList.push(nation);
@@ -61,8 +51,8 @@ $scope.Getrecord = function(Admin){
 }
 
   //7.Xóa record( D - deleted)
-  $scope.Delete = function(Admin) {
-    var _index = $scope.AdminList.indexOf(Admin);
+  $scope.Delete = function(i) {
+    var _index = $scope.AdminList.indexOf(i);
     $scope.AdminList.splice(_index, 1);
     }
 });
