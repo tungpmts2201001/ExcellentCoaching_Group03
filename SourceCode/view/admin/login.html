@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bai kiem tra</title>
+    <title>LOGIN</title>
     <link rel="stylesheet" href="/SourceCode/css/adminstyle.css">
     <script src="/SourceCode/controller/admincontroller.js"></script>
 </head>
@@ -13,35 +13,31 @@
         <div align="center" class="contain">
             <div class=container>
                 <div class="header">
-                    <h3>ĐĂNG NHẬP HỆ THỐNG</h3>
+                    <h3>LOGIN ADMIN</h3>
                 </div>
                 <div class=body>
-                    <div class=image>
-                        <img src="/image/3.jpg" >
-                    </div>
                     <div class="main">
                         <div class=word>
-                            <label>Tài khoản</label>
+                            <label>UserName</label>
                             <input id="Input-info" required type="text">
                         </div>
                         <div class=word>
-                            <label>Mật khẩu</label>
+                            <label>Password</label>
                             <input id="Input-info" required type="password" class="input1">
                         </div>    
                         <div class=nut>
-                            <button type="submit" id="chk" >Đăng nhập</button>
-                            <button type="reset">Nhập lại</button>
+                            <button type="submit" id="chk" >LOGIN</button>
+                            <button type="reset">RESET</button>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </form>
     <div class="all" id="modal">
         <div class="modal" >
             <div class="content">
-                <p>Đăng nhập thành công</p>
+                <p>Logged in successfully</p>
                 <div class="footer">
                     <button class="button" id="done" onclick="hidePopup()">OK</button>
                 </div>
