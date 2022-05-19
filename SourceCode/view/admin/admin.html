@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta UserName="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="IndexController.js"></script>
+    <link rel="stylesheet" href="style.css"></style>
+
+
+    <title>Admin</title>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <header>
+<div align="right">
+<input ng-model="txtSearch" placeholder="Enter your search">
+</div>
+
+    </header>
+
+<section>
+<form UserName="myForm" id="myForm">
+<table align="center">
+    <tr>
+        <th>Admin Id: </th>
+            <td>
+            <input type="text" UserName="txtbrand" ng-model="AdminModel.Id" required>
+            </td>
+            <td>
+                <input type="button" value="Save" ng-click="Add()">
+            </td>
+        
+
+    </tr>
+    <tr>
+        <th>Admin UserName: </th>
+        <td><input type="text" ng-model="AdminModel.UserName" required></td>
+        <td>
+  
+            <button ng-click="Delete()">Deleted</button> 
+        </td>
+
+    </tr>
+    <tr>
+        <th>Capital Password: </th>
+        <td><input type="text" ng-model="AdminModel.Password" required></td>
+
+    </tr>
+
+
+</table>
+</form>
+
+<table class="table table-hover">
+    <tr>
+        <th ng-click="doSapxep('Id')">Admin Id</th>
+        <th ng-click="doSapxep('UserName')">Admin UserName</th>
+        <th ng-click="doSapxep('Password')">Cappital Password</th>
+    </tr>
+
+    <tr ng-repeat="i in AdminList | filter:txtSearch | orderBy:sapxep.cot:sapxep.descending" ng-click="Getrecord(i)">
+        <td>{{i.Id}}</td>
+        <td>{{i.UserName}}</td>
+        <td>{{i.Password}}</td>
+        <td>
+            <a href="#" ng-click="Delete(Admin)">Delete</a>
+          </td>
+    </tr>
+</table>
+</section>
+
+
+
+
+</body>
+</html>
