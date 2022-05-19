@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html ng-app="">
 
-<head ng-include="'/SourceCode/view/layout/head.html'">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href='/SourceCode/css/style.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Homepage</title>
 </head>
 
@@ -25,19 +33,21 @@
           <div class="carousel-inner">
             <div class="item active">
               <img
-                src="https://www.rmit.edu.vn/content/dam/rmit/vn/en/assets-for-production/images/homepage/mib-info-day-event-banner-1440x400.jpg"
+                src="/SourceCode/image/banner1.jpg"
                 alt="" style="width:100%;">
+              <div class="carousel-caption">
+                <h2>ExcellentCoaching University ranks high in the world for impact, 3rd in inequality reduction</h2>
+              </div>
             </div>
-
             <div class="item">
               <img
-                src="https://www.rmit.edu.vn/content/dam/rmit/vn/en/assets-for-production/images/homepage/8-may-event-carousel.jpg"
+                src="/SourceCode/image/banner2.jpg"
                 alt="" style="width:100%;">
-            </div>
-
-            <div class="item">
-                <img src="ny.jpg" alt="" style="width:100%;">
+              <div class="carousel-caption">
+                <h2>ExcellentCoaching University Announces Scholarship Program 2022</h2>
+                <p>Eighty-one scholarships for undergraduate and graduate students entering ExcellentCoaching Vietnam in 2022 have begun accepting applications.</p>
               </div>
+            </div>
           </div>
 
           <!-- Left and right controls -->
@@ -94,7 +104,7 @@
         </div>
       </section>
       <section>
-        <div align="center" class="row">
+        <div class="row">
           <div class="col-12">
             <h1 class="text-center contact-form-title">LATEST NEWS</h1>
           </div>
