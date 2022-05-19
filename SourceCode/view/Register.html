@@ -1,46 +1,13 @@
 <!DOCTYPE html>
 <html ng-app="">
 
-<head ng-include="'/view/layout/head.html'">
+<head ng-include="'/SourceCode/view/layout/head.html'">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="/SourceCode/controller/Registercontroller.js"></script>
     <title>Courses</title>
 </head>
 <body>
- <header class="header" ng-include="'/SourceCode/view/layout/header.html'">
-
-</header>
-<script>
-function check(){
-            var sName = document.getElementById("txtName").value;
-            var reName = /^\w/;
-            if(!reName.test(sName)){
-                alert("Login Name cannot left blank!")
-                document.getElementById("txtName").focus;
-                return false;
-            }
-            var sMail = document.getElementById("txtMail").value;
-            var reMail = /^\w+[@]\w+[.]\w+([.]\w+)?/;
-            if(!reMail.test(sMail)){
-                alert("Wrong Email")
-                document.getElementById("txtMail").focus;
-                return false;
-            }
-            var sPhone = document.getElementById("txtPhone").value;
-            var rePhone = /^\d{8,12}$/;
-            if(!rePhone.test(sPhone)){
-                alert("False Phone")
-                document.getElementById("txtPhone").focus;
-                return false;
-            }
-
-         var message = [];
-        message.push("Your iformation has been sent successfully!");
-        message.push("You have successfully Registered");
-        alert(message.join("\n"));
-
-        }
-</script>
- 
+ <header class="header" ng-include="'/SourceCode/view/layout/header.html'"></header>
 <main>
     <div class="app-container">
     <section>
