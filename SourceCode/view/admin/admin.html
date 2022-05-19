@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="IndexController.js"></script>
+    <script src="/SourceCode/controller/admincontroller.js"></script>
     <link rel="stylesheet" href="/SourceCode/css/adminstyle.css"></style>
 
 
@@ -27,7 +27,7 @@
 <form UserName="myForm" id="myForm">
 <table align="center">
     <tr>
-        <th>Admin Id: </th>
+        <th>Id: </th>
             <td>
             <input type="text" UserName="txtbrand" ng-model="AdminModel.Id" required>
             </td>
@@ -38,7 +38,7 @@
 
     </tr>
     <tr>
-        <th>Admin UserName: </th>
+        <th>UserName: </th>
         <td><input type="text" ng-model="AdminModel.UserName" required></td>
         <td>
   
@@ -58,8 +58,8 @@
 
 <table class="table table-hover">
     <tr>
-        <th ng-click="doSapxep('Id')">Admin Id</th>
-        <th ng-click="doSapxep('UserName')">Admin UserName</th>
+        <th ng-click="doSapxep('Id')">Id</th>
+        <th ng-click="doSapxep('UserName')"> UserName</th>
         <th ng-click="doSapxep('Password')">Cappital Password</th>
     </tr>
 
