@@ -249,3 +249,88 @@ th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+figure.snip1220 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  background-color: #07090c;
+  font-size: 16px;
+  -webkit-perspective: 50em;
+  perspective: 50em;
+}
+figure.snip1220 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip1220 img {
+  opacity: 1;
+  max-width: 100%;
+  vertical-align: top;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+figure.snip1220 figcaption {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: rotateX(90deg) translateY(-150%) scale(0.5);
+  transform: rotateX(90deg) translateY(-150%) scale(0.5);
+  z-index: 1;
+  opacity: 0;
+  padding: 0 30px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+figure.snip1220 h3,
+figure.snip1220 p {
+  line-height: 1.5em;
+}
+figure.snip1220 h3 {
+  margin: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+figure.snip1220 p {
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0 0 15px;
+}
+figure.snip1220 .read-more {
+  border: 2px solid #ffffff;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+}
+figure.snip1220 .read-more:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+figure.snip1220:hover img,
+figure.snip1220.hover img {
+  -webkit-transform: rotateX(-100deg) translateY(50%) scale(0.5);
+  transform: rotateX(-100deg) translateY(50%) scale(0.5);
+  opacity: 0;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+figure.snip1220:hover figcaption,
+figure.snip1220.hover figcaption {
+  -webkit-transform: rotateX(0deg) translateY(-50%) scale(1);
+  transform: rotateX(0deg) translateY(-50%) scale(1);
+  opacity: 1;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
