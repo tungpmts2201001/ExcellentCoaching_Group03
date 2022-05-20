@@ -9,10 +9,10 @@ Phạm Quốc Vinh (Student1359473)
 Nguyễn Tấn Lợi (Student1359465)
 =======================================
 
-Documentations : https://github.com/tungpmts2201001/eProject-Sem01_T1.2201.E0_ExcellentCoaching_Group03/tree/main/Documentations
+Documentations : https://github.com/tungpmts2201001/ExcellentCoaching_Group03/tree/main/Documentations
 =======================================
 
-Published website : https://tungpmts2201001.github.io/eProject-Sem01_T1.2201.E0_ExcellentCoaching_Group03/
+Published website : https://tungpmts2201001.github.io/ExcellentCoaching_Group03/
 
 =======================================
 
